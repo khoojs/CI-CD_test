@@ -8,9 +8,8 @@ services:
 script:
 - docker run -d -p 8080:8080 u1ih/nodejs-api
 
-notifications:  
-  email:  
-    recipients:  
-    - js_khoo@live.com 
-    on_success: always  
-    on_failure: always
+after_script:
+  - curl 
+  -X POST https://api.telegram.org/bot1311265513:AAFTQI69Oh1e5w7SjYTiDiyb_SHy6iQ2P6U/sendMessage 
+  -d chat_id=126955120
+  -d "text=Build Succeed"
