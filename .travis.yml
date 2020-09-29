@@ -1,4 +1,16 @@
-language: ruby
-rvm:
- - 2.2
- - jruby
+language: node_js
+node_js:
+- 12
+
+services:
+  - docker
+  
+script:
+- docker run -d -p 8080:8080 u1ih/nodejs-api
+
+notifications:  
+  email:  
+    recipients:  
+    - js_khoo@live.com 
+    on_success: always  
+    on_failure: always
