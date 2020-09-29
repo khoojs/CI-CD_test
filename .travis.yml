@@ -9,8 +9,4 @@ script:
 - docker run -d -p 8080:8080 u1ih/nodejs-api
 
 after_script:
-  - curl 
-  -X POST https://api.telegram.org/bot1311265513:AAFTQI69Oh1e5w7SjYTiDiyb_SHy6iQ2P6U/sendMessage 
-  -d chat_id=-348620790
-  -d "text=Build Succeed"
-
+  - curl -X POST https://api.telegram.org/bot1311265513:AAFTQI69Oh1e5w7SjYTiDiyb_SHy6iQ2P6U/sendMessage -d chat_id=-348620790 -d "text=Build Succeed"
