@@ -1,5 +1,3 @@
-# Currency Exchange API – NodeJS
+# CI/CD Assignemnt
 
-docker run -d -p 8080:8080 u1ih/nodejs-api
-
-curl -i http://localhost:8080/fx
+Telegram Notification for Build Success/Failure after triggering a commit
